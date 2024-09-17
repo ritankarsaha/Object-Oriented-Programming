@@ -19,6 +19,7 @@ class VehicleData{
 class Bike extends VehicleData{
     public Bike(int j){
         super(j);
+        
     }
 }
 
