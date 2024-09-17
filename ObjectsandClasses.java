@@ -9,7 +9,6 @@ public class ObjectsandClasses {
     
 }
 
-
 class Person{
     String name;
     int age;
