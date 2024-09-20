@@ -88,13 +88,17 @@ abstract class User{
     }
 
     public void checkBorrowedBooks(){
-        if(borrowedBooks.isEmpty()){
-            System.err.println("No books has been borrowed till now. ");
-        }
-        else{
-            for(Book book : borrowedBooks){
-                System.out.println(book.getTitle());
+        try {
+            if(borrowedBooks.isEmpty()){
+                throw new RuntimeException("No books borrowed.");
             }
+            else{
+                for(Book book : borrowedBooks){
+                    System.out.println(book.getTitle());
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("No books borrowed.");
         }
     }
 
